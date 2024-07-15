@@ -3,6 +3,12 @@
 https://arxiv.org/pdf/2104.01681
 
 
+M1 - optimization
+```shell
+pip install pyobjc-core pyobjc-framework-Metal pyobjc-framework-MetalPerformanceShaders
+python test-m1.py
+```
+
 
 ```shell
 python setup.py install
