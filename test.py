@@ -237,8 +237,9 @@ def compare_conv_layers(in_channels, out_channels, kernel_size, input_size, acti
         print("\nCreating Conv2d layer...")
         conv = nn.Conv2d(in_channels, out_channels, kernel_size, padding=kernel_size//2)
         print("Creating PCILTConv2d layer...")
-        pcilt_conv = WinogradPCILTConv2d(in_channels, out_channels, kernel_size, padding=kernel_size//2, 
-                                 activation_bits=activation_bits, weight_bits=weight_bits)
+        # pcilt_conv = PCILTConv2d(in_channels, out_channels, kernel_size, padding=kernel_size//2, 
+                                #  activation_bits=activation_bits, weight_bits=weight_bits)
+        pcilt_conv = WinogradPCILTConv2d(in_channels, out_channels, activation_bits=activation_bits, weight_bits=weight_bits)
 
         # Create input tensor
         print(f"\nCreating input tensor with shape (1, {in_channels}, {input_size}, {input_size})...")
